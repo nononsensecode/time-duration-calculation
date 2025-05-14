@@ -8,3 +8,4 @@ name = "time_duration_calculator"
 path = "src/time_duration_calculator.rs"
 
 [dependencies]
+chrono = "0.4"
