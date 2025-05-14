@@ -179,7 +179,9 @@ fn main() {
     use time_parsing::parse_time_components;
 
     let args: Vec<String> = env::args().collect();
-    let program_name = args.get(0).map_or("time_diff_calculator", |s| s.as_str());
+    let program_name = args
+        .get(0)
+        .map_or("time_duration_calculator", |s| s.as_str());
 
     if args.len() != 2 {
         eprintln!("Calculates the difference in hours between two times in a day.");
