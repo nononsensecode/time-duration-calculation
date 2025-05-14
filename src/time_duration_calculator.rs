@@ -240,7 +240,7 @@ fn main() {
             let h = total_minutes / 60;
             let m = total_minutes % 60;
             println!("{}h {}m", h, m);
-        },
+        }
         Err(e) => {
             eprintln!("Error: {}", e);
             process::exit(1);
