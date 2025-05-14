@@ -235,7 +235,12 @@ fn main() {
     }
 
     match final_result {
-        Ok(hours) => println!("{:.2} hours", hours),
+        Ok(hours) => {
+            let total_minutes = (hours * 60.0).round() as u32;
+            let h = total_minutes / 60;
+            let m = total_minutes % 60;
+            println!("{}h {}m", h, m);
+        },
         Err(e) => {
             eprintln!("Error: {}", e);
             process::exit(1);
